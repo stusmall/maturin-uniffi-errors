@@ -1,0 +1,18 @@
+[package]
+name = "maturin-uniffi-errors"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/uniffi-bindgen.rs"
+
+[lib]
+crate-type = ["cdylib"]
+name = "cyclone_dx_example"
+
+[dependencies]
+uniffi = { version = "0.26", features = ["cli"] }
+
+[build-dependencies]
+uniffi = { version = "0.26", features = [ "build" ] }
